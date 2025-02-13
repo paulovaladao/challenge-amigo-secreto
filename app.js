@@ -19,7 +19,7 @@ function adicionarAmigo() {
 
 function atualizarLista() {
     let lista = document.getElementById('listaAmigos'); // Captura a <ul> da lista
-    lista.innertHTML = ''; // Limpa a lista antes de atualizar
+    lista.innerHTML = ''; // Limpa a lista antes de atualizar
 
     amigos.forEach(function (amigo) {
         let li = document.createElement('li'); // Cria um novo <li>
