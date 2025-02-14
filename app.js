@@ -27,3 +27,14 @@ function atualizarLista() {
         lista.appendChild(li); // Adiciona o <li> na <ul>
     });
 }
+
+function sortearAmigo() {
+    if (amigos.length === 0) { //Se a lista estiver vazia
+        alert("A lista de amigos está vazia! Adicione nome antes de sortear.");
+        return; //Para a execução da  função
+    }
+    let indiceSorteado = Math.floor(Math.random() * amigos.length); // "Math.floor" Arredonda o número para baixo, garantindo um índice válido.
+    let amigoSorteado = amigos[indiceSorteado];
+    let resultadoElemento = document.getElementById('resultado'); // Pega o elemento onde o resulatado será exibido
+    resultadoElemento.innerHTML = `<li>${amigoSorteado}</li>`; // Define o nome sorteado como um item de lista
+}
